@@ -168,11 +168,7 @@ main .bannerRecado{
     main .Cards .card-info{
         width: 70%;
     }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+
     .bannerHorizontal{
         flex-direction: column;
         align-items: center;
