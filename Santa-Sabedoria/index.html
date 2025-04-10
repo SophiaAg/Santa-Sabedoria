@@ -7,35 +7,40 @@
 
     <!-- links -->
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="navbar.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
      
 </head>
 <body>
     <header>
-        <section class="Header">
-        <section class="logo-img"><img src="img/logo-renascer 2.png" alt="logo da santa sabedoria"></section>
-     <h1>SANTA SABEDORIA</h1>
+        <article class="navbar">
+            
+            <article class="logo"><a href="/"><img src="img/logo-renascer 2.png" alt="logo"></a> <h2>Santa Sabedoria</h2></article>
+            
 
-     <ul class="conteudo">
-        <li><a class="links-name-cor" href="">Calendario</a></li>
-        <li><a class="links-name-cor" href="">Daoções</a></li>
-        <li><a class="links-name-cor" href="">Sobre nós</a></li>
-        <li><a class="links-name-cor" href="">Contato</a></li>
-    </ul>
-    <article class="toggle_btn"> <i class="fa-solid fa-bars"></i> </article>
-     
-    <article class="fa-regular fa-moon" id="darkmode"> </article> 
-    
-    <article class="dropdown_menu">
-        <li><a class="links-name-cor" href="/#home">Home</a></li>
-        <li><a class="links-name-cor" href="/#servicos">Serviços</a></li>
-        <li><a class="links-name-cor" href="/#sobre-nós">Sobre nós</a></li>
-        <li><a class="links-name-cor" href="/#sou-empresa">Sou Empresa</a></li>
-        <li> <a href="/entrar" class="action_btn_dropdown">Sou Cliente</a></li>
-        <li> <a href="/loginEmpresa" class="action_btn_dropdown">Sou Empresa</a></li>
-    </article>
-    </section>
+
+            <ul class="links-name">
+                <ul><a class="links-name-cor" href="/#home">Home</a></ul>
+                <ul><a class="links-name-cor" href="/#servicos">Serviços</a></ul>
+                <ul><a class="links-name-cor" href="/#sobre-nós">Sobre nós</a></ul>
+                <ul><a class="links-name-cor" href="/#sou-empresa">Sou Empresa</a></ul>
+
+            </ul>
+            <div class="icons-navbar">
+            <article class="toggle_btn"> <i class="fa-solid fa-bars"></i> </article>
+           <article class="fa-regular fa-moon" id="darkmode"> </article> 
+        </div>
+
+
+            <article class="dropdown_menu">
+                <ul><a class="links-name-cor" href="/#home">Home</a></ul>
+                <ul><a class="links-name-cor" href="/#servicos">Serviços</a></ul>
+                <ul><a class="links-name-cor" href="/#sobre-nós">Sobre nós</a></ul>
+                <ul><a class="links-name-cor" href="/#sou-empresa">Sou Empresa</a></ul>
+            </article>
+
+
     </header>
     <main>
         <article class="bannerPrincipal">
@@ -136,5 +141,6 @@
         </div>
     </footer>
 </body>
+<script src="navbar.js"></script>
 <script src="script.js"></script>
 </html>
