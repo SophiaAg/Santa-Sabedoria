@@ -5,15 +5,13 @@
   }
 
 :root {
-    /* Cores do tema claro (padrão) */
     --bg-color: #ffffff;
     --text-color: #333333;
     --primary-color: #b1b1b1;
     --secondary-color: #03dac6;
   }
   
-  [data-theme="dark"] {
-    /* Cores do tema escuro */
+  body.color {
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --primary-color: #bb86fc;
