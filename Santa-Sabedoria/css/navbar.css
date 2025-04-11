@@ -42,7 +42,7 @@ header{
   }
    
   .navbar{
-    width: 100%;
+    width: 90%;
     height: 60px;
     max-width: 1200px;
     margin: 0 auto;
@@ -156,7 +156,72 @@ header{
 
   }
    
-   
+   /* CORREÇÕES NO HEADER */
+header {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px; /* Altura fixa adicionada */
+  box-shadow: 0 .3rem 1.5rem rgba(82, 82, 82, 0.3);
+  transform: translateY(0); /* Correção da transformação */
+}
+
+/* ADICIONE ISSO NO FINAL DO CSS */
+main {
+  padding-top: 60px; /* Altura da navbar */
+  min-height: 100vh;
+}
+
+/* CORREÇÕES NA NAVBAR */
+.navbar {
+  width: 90%;
+  height: 100%; /* Alterado para 100% */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adicionado */
+}
+
+/* CORREÇÃO NO DROPDOWN MENU */
+.dropdown_menu {
+  top: 60px; /* Ajuste para altura da navbar */
+}
+
+/* CORREÇÃO NA RESPONSIVIDADE */
+@media(max-width:992px) {
+  .navbar .icons-navbar {
+      margin-left: auto; /* Correção do alinhamento */
+      padding: 0;
+      gap: 15px;
+  }
+  
+  .navbar .logo {
+      width: auto;
+      margin-right: 0;
+  }
+}
+
+@media(max-width:576px) {
+  header {
+      padding: 0.8rem 5%;
+  }
+  
+  .navbar .logo a {
+      font-size: 1.2rem;
+  }
+  
+  .navbar .logo img {
+      width: 40px;
+  }
+}
   /*HEADER RESPONSIVO*/
   @media(max-width:992px){
     .navbar .links-name,

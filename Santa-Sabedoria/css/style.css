@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -9,51 +10,47 @@
     scroll-padding-top: 2rem;
     scroll-behavior: smooth;
 }
- 
+
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
     --primary-color: #b1b1b1;
     --secondary-color: #03dac6;
-  }
-  
-  body.color {
+}
+
+body.color {
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --primary-color: #bb86fc;
     --secondary-color: #03dac6;
-  }
+}
 
-  button{
+button {
     width: 30%;
     border: none;
     border-radius: 20px;
     font-size: 16px;
     height: 30px;
     background-color: var(--primary-color);
-  }
+}
 
-main .bannerPrincipal{
+main .bannerPrincipal {
     background-color: var(--primary-color);
-    margin-top: 10%;
-    margin-bottom: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 10% 5% 3%;
     height: 400px;
     width: 90%;
     border-radius: 20px;
 }
 
-main .SubBanner h1{
+main .SubBanner h1 {
     font-size: 24px;
     font-weight: 100;
     font-style: italic;
     text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 0 15%;
 }
 
-main .SubBanner strong{
+main .SubBanner strong {
     font-size: 24px;
     font-style: italic;
     text-align: center;
@@ -62,119 +59,184 @@ main .SubBanner strong{
     margin-bottom: 3%;
 }
 
-main .Cards{
+main .Cards {
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 3% 5%;
     justify-content: center;
     align-items: center;
     gap: 5%;
-    margin-top: 3%;
-    margin-bottom: 3%;
 }
 
-main .Cards .card-info img{
-   
-}
-
-main .Cards .card-info{
+main .Cards .card-info {
     width: 30%;
+    min-width: 250px;
     padding: 3%;
+    margin-bottom: 20px;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
-
-main .Cards .card-info h1 h2{
-    font-size: 24px;
-}
-
-main .bannerHorizontal{
-    width: 100%;
-    height: 400px;
-    display: flex;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    background-color: var(--primary-color);
-}
-
-main .bannerHorizontal .img-bannerHorizontal{
-    width: 50%;
-}
-
-main .bannerHorizontal .conteudo-bannerHorizontal{
-    text-align: left;
-    margin: auto;
-    width: 40%;
-
-}
-
-main .bannerHorizontal .conteudo-bannerHorizontal h1{ font-size: 40px; }
-main .bannerHorizontal .conteudo-bannerHorizontal h2{ font-size: 32px;}
-main .bannerHorizontal .conteudo-bannerHorizontal p{ font-size: 20px;}
-
-main .Recado{
-    margin-left: 5%;
-    margin-right: 5%; 
-    width: 90%;
-    display: flex;
-}
-
-main .Recado .img-recado{
-    width: 250px;
-    background-color: var(--primary-color);
-    border-radius: 100%;
-    height: 250px;
-    padding: 5%;
-    margin-right: 5%; 
-}
-
-main .Recado .conteudo-recado{
-    text-align: left;
-    margin: auto;
-    width: 70%;
-}
-
-main .Recado .conteudo-recado h1{ font-size: 40px; }
-main .Recado .conteudo-recado h2{ font-size: 32px;}
-main .Recado .conteudo-recado p{ font-size: 20px;}
-
-main .bannerRecado{
-    border: 1px solid var(--primary-color);
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 200px;
-    width: 90%;
-    border-radius: 20px;
-    text-align: center;
-    align-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+main .Cards .card-info h1,
+main .Cards .card-info h2 {
+    font-size: 24px;
+}
 
+main .bannerHorizontal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 3% 0;
+    background-color: var(--primary-color);
+}
 
-/* Responsividade */
-@media (max-width: 768px) {
-    main .Cards{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        gap: 20px;
+main .bannerHorizontal .img-bannerHorizontal {
+    width: 100%;
+    order: 1;
+}
+
+main .bannerHorizontal .conteudo-bannerHorizontal {
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    order: 2;
+}
+
+main .bannerHorizontal .conteudo-bannerHorizontal h1 {
+    font-size: 32px;
+}
+
+main .bannerHorizontal .conteudo-bannerHorizontal h2 {
+    font-size: 24px;
+}
+
+main .bannerHorizontal .conteudo-bannerHorizontal p {
+    font-size: 16px;
+}
+
+main .Recado {
+    margin: 0 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .Recado .img-recado {
+    width: 200px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    height: 200px;
+    padding: 5%;
+    margin: 0 auto 20px;
+}
+
+main .Recado .conteudo-recado {
+    text-align: center;
+    width: 100%;
+}
+
+main .Recado .conteudo-recado h1 {
+    font-size: 32px;
+}
+
+main .Recado .conteudo-recado h2 {
+    font-size: 24px;
+}
+
+main .Recado .conteudo-recado p {
+    font-size: 16px;
+}
+
+main .bannerRecado {
+    border: 1px solid var(--primary-color);
+    margin: 3% 5%;
+    height: auto;
+    min-height: 200px;
+    width: 90%;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 768px) {
+    main .bannerHorizontal {
+        flex-direction: row;
+        height: 400px;
     }
+    
+    main .bannerHorizontal .img-bannerHorizontal {
+        width: 50%;
+        order: 0;
     }
-    main .Cards .card-info{
+    
+    main .bannerHorizontal .conteudo-bannerHorizontal {
+        text-align: left;
+        width: 40%;
+        margin: auto;
+        padding: 0;
+    }
+    
+    main .bannerHorizontal .conteudo-bannerHorizontal h1 {
+        font-size: 40px;
+    }
+    
+    main .bannerHorizontal .conteudo-bannerHorizontal h2 {
+        font-size: 32px;
+    }
+    
+    main .bannerHorizontal .conteudo-bannerHorizontal p {
+        font-size: 20px;
+    }
+    
+    main .Recado {
+        flex-direction: row;
+    }
+    
+    main .Recado .img-recado {
+        width: 250px;
+        height: 250px;
+        margin-right: 5%;
+        margin-bottom: 0;
+    }
+    
+    main .Recado .conteudo-recado {
+        text-align: left;
         width: 70%;
     }
-
-    .bannerHorizontal{
-        flex-direction: column;
-        align-items: center;
+    
+    main .Recado .conteudo-recado h1 {
+        font-size: 40px;
     }
-    .Recado{
-        flex-direction: column;
-        align-items: center;
+    
+    main .Recado .conteudo-recado h2 {
+        font-size: 32px;
     }
+    
+    main .Recado .conteudo-recado p {
+        font-size: 20px;
+    }
+}
 
+@media (max-width: 600px) {
+    main .Cards .card-info {
+        width: 100%;
+    }
+    
+    button {
+        width: 50%;
+    }
+    
+    main .SubBanner h1,
+    main .SubBanner strong {
+        font-size: 18px;
+        margin: 0 5%;
+    }
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -9,98 +10,160 @@
     scroll-padding-top: 2rem;
     scroll-behavior: smooth;
 }
- 
+
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
     --primary-color: #b1b1b1;
     --secondary-color: #03dac6;
-  }
-  
-  body.color {
+}
+
+body.color {
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --primary-color: #bb86fc;
     --secondary-color: #03dac6;
-  }
+}
 
-  button{
+button {
     width: 30%;
     border: none;
     border-radius: 20px;
     font-size: 16px;
     height: 30px;
     background-color: var(--primary-color);
-  }
+}
 
-main .bannerPrincipal{
+main .bannerPrincipal {
     background-color: var(--primary-color);
-    margin-top: 10%;
-    margin-bottom: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 10% 5% 3%;
     height: 400px;
     width: 90%;
     border-radius: 20px;
 }
 
-main .mensagem{
+main .mensagem {
     display: flex;
     margin: 5%;
     justify-content: center;
-
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-main .mensagem .conteudo-mensagem{
-    width: 50%;
+main .mensagem .conteudo-mensagem {
+    width: 100%;
+    max-width: 600px;
     padding: 20px;
 }
 
-main .mensagem .img-mensagem{
+main .mensagem .img-mensagem {
     background-color: var(--primary-color);
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 200px;
     border-radius: 20px;
 }
 
-
-
-
-
-main .bannerRecado{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 300px;
+main .bannerRecado {
+    margin: 3% 5%;
+    min-height: 300px;
     width: 90%;
     border-radius: 20px;
     text-align: center;
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-main .bannerRecado .conteudo-bannerRecado{
-
-margin-left: 15%;
-margin-right: 15%
+main .bannerRecado .conteudo-bannerRecado {
+    margin: 0 5%;
+    width: 90%;
+    max-width: 800px;
 }
 
-
-main .bannerHorizontal{
+main .bannerHorizontal {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     display: flex;
-    margin-top: 3%;
-    margin-bottom: 0;
+    flex-direction: column;
+    margin: 3% 0;
     background-color: var(--primary-color);
 }
 
-main .bannerHorizontal .img-bannerHorizontal{
-    width: 50%;
+main .bannerHorizontal .img-bannerHorizontal {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-main .bannerHorizontal .conteudo-bannerHorizontal{
-    text-align: left;
-    margin: auto;
-    width: 40%;
+main .bannerHorizontal .conteudo-bannerHorizontal {
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    main .mensagem {
+        flex-wrap: nowrap;
+        gap: 40px;
+    }
+
+    main .mensagem .conteudo-mensagem {
+        width: 50%;
+    }
+
+    main .mensagem .img-mensagem {
+        width: 300px;
+        height: 300px;
+    }
+
+    main .bannerHorizontal {
+        flex-direction: row;
+        height: 300px;
+    }
+
+    main .bannerHorizontal .img-bannerHorizontal {
+        width: 50%;
+        height: auto;
+    }
+
+    main .bannerHorizontal .conteudo-bannerHorizontal {
+        text-align: left;
+        width: 40%;
+        margin: auto;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    main .bannerPrincipal {
+        height: 250px;
+        margin: 15% 5%;
+    }
+
+    button {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    main .bannerHorizontal .conteudo-bannerHorizontal h1 {
+        font-size: 24px;
+    }
+
+    main .bannerHorizontal .conteudo-bannerHorizontal h2 {
+        font-size: 20px;
+    }
+
+    main .bannerHorizontal .conteudo-bannerHorizontal p {
+        font-size: 16px;
+    }
+
+    main .bannerRecado {
+        min-height: 400px;
+    }
 }
