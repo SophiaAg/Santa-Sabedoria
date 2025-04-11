@@ -6,11 +6,66 @@
     <title>Santa Sabedoria</title>
 
     <!-- links -->
-     <link rel="stylesheet" href="css/cursos.css">
+     <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="css/navbar.css">
      <link rel="stylesheet" href="css/footer.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
+     <style>
+        .calendario-container {
+          max-width: 900px;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: var(--bg-color);
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    
+        .calendario-container h1 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+    
+        .mes-atual {
+          text-align: center;
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+    
+        .dias-semana {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          font-weight: bold;
+          background-color: var(--primary-color);
+          color: white;
+          padding: 10px 0;
+          border-radius: 5px;
+        }
+    
+        .dias {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 10px;
+          margin-top: 10px;
+        }
+    
+        .dia {
+          background-color: #f4f4f4;
+          padding: 15px;
+          border-radius: 5px;
+          text-align: center;
+          transition: background 0.3s;
+        }
+    
+        .dia:hover {
+          background-color: var(--secondary-color);
+          color: white;
+          cursor: pointer;
+        }
+    
+        .footer {
+          margin-top: 60px;
+        }
+      </style>
      
 </head>
 <body>
@@ -40,42 +95,17 @@
 
 
     </header>
+
     <main>
-        <article class="bannerPrincipal">
-            <img src="" alt="imagem do banner">
-        </article>
-
-        <article class="Cards">
-            <section class="card-info">
-                <img src="img/Home Insurance.png" alt="icone de casa">
-                <h1>APOIO A FAMILIAS</h1>
-                <p>Lorem Ipsum is simply dummy text 
-                    of the printing and typesetting industry. </p>
-            </section>
-
-            <section class="card-info">
-                <img src="img/Group.png" alt="icone de orientação">
-                <h1>APOIO A FAMILIAS</h1>
-                <p>Lorem Ipsum is simply dummy text 
-                    of the printing and typesetting industry. </p>
-            </section>
-
-            <section class="card-info">
-                <img src="img/Help.png" alt="icone de pessoas se ajudando">
-                <h1>APOIO A FAMILIAS</h1>
-                <p>Lorem Ipsum is simply dummy text 
-                    of the printing and typesetting industry. </p>
-            </section>
-
-            <section class="card-info">
-                <img src="img/Help.png" alt="icone de pessoas se ajudando">
-                <h1>APOIO A FAMILIAS</h1>
-                <p>Lorem Ipsum is simply dummy text 
-                    of the printing and typesetting industry. </p>
-            </section>
-        </article>
-
-    </main>
+        <section class="calendario-container">
+          <h1>Calendário de Atividades</h1>
+          <div class="mes-atual" id="mesAno"></div>
+          <div class="dias-semana">
+            <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+          </div>
+          <div class="dias" id="dias"></div>
+        </section>
+      </main>
 
     <footer class="footer">
         <div class="footer-content">
